@@ -10,8 +10,21 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[contenthash].js',
+    //filename: 'js/[name].[chunkhash].js'
    
   },
+  // optimization: {
+  //   runtimeChunk: 'single',
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       vendor: {
+  //                test: /[\\/]node_modules[\\/]/,
+  //                name: 'vendors',
+  //                chunks: 'all',
+  //              },
+  //            },
+  //       },
+  // },
   devtool: 'source-map',
   module: {
     rules: [
@@ -46,7 +59,7 @@ module.exports = {
           ],
         },
         {
-            test: /\.(png|jpe?g|gif)$/,
+            test: /\.(png|jpe?g|gif|webp)$/,
             use: [{
                     loader:'file-loader',
                     options: {
@@ -67,6 +80,7 @@ module.exports = {
         }), 
     new MiniCssExtractPlugin({
       filename:'css/[contenthash].css'
+      //filename:'css/[name].[chunkhash].css'
     })
   ]
 };

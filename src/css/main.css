@@ -1,5 +1,5 @@
 /* Typography imported from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+/* @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400'); */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
@@ -15,7 +15,7 @@ html {
 }
 
 a {
-  background-color: goldenrod;
+  background-color: #212121;
   text-decoration: none;
   color: white;
   border-radius: .25rem;
@@ -31,7 +31,7 @@ a:hover {
 /* Styles for the hero image */
 .hero {
   /* Photo by mnm.all on Unsplash */
-  background: url('/img/photo0.jpeg') center;
+  background: url('/img/photo0.webp') center;
   background-size: cover;
   padding: 4rem 2rem;
   /* grid styles */
@@ -61,15 +61,15 @@ a:hover {
 
 /* breweries styles */
 .breweries {
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .breweries > ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 1rem;
   list-style: none;
-
+  padding: inherit;
 }
 
 .breweries > ul > li {
@@ -89,9 +89,23 @@ a:hover {
   position: relative;
 }
 
+
+/* .no-webp .elementWithBackgroundImage {
+  background-image: url("dist/img/photo1.jpg");
+}
+
+.webp .elementWithBackgroundImage{
+  background-image: url("dist/img/photo1.webp");
+} */
+
 .breweries > ul > li > figure > img {
-    width: 100%;
-    min-height: 220px;
+    max-width: 100%;
+    height: auto;
+}
+
+.breweries > ul > li > figure > .webp {
+  max-width: 100%;
+  height: auto;
 }
 
 .breweries > ul > li > figure > figcaption {
