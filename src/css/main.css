@@ -90,22 +90,18 @@ a:hover {
 }
 
 
-/* .no-webp .elementWithBackgroundImage {
-  background-image: url("dist/img/photo1.jpg");
-}
-
-.webp .elementWithBackgroundImage{
-  background-image: url("dist/img/photo1.webp");
-} */
-
 .breweries > ul > li > figure > img {
-    max-width: 100%;
-    height: auto;
+    /* max-width: 100%;
+    height: auto; */
+    width: 100%;
+    min-height: 220px;
 }
 
 .breweries > ul > li > figure > .webp {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%;
+  height: auto; */
+  width: 100%;
+  min-height: 220px;
 }
 
 .breweries > ul > li > figure > figcaption {
