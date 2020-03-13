@@ -10,12 +10,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[contenthash].js',
-  
+    //filename: 'js/[name].[chunkhash].js'
+   
   },
-  // devServer: {
-  //   open: true
-  // },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
         {
@@ -27,7 +25,7 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  { useBuiltIns: 'usage', corejs: { version: 3 } }
+                  { useBuiltIns: 'usage', corejs: { version: 3, proposals: true } }
                   //dont forget this line in package.json
                   // "browserslist":">0.3%, not dead",
                 ]
@@ -49,7 +47,7 @@ module.exports = {
           ],
         },
         {
-            test: /\.(jpg|png)$/,
+            test: /\.(png|jpe?g|gif|webp)$/,
             use: [{
                     loader:'file-loader',
                     options: {
@@ -70,6 +68,7 @@ module.exports = {
         }), 
     new MiniCssExtractPlugin({
       filename:'css/[contenthash].css'
+      //filename:'css/[name].[chunkhash].css'
     })
   ]
 };

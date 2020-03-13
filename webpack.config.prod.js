@@ -13,19 +13,7 @@ module.exports = {
     //filename: 'js/[name].[chunkhash].js'
    
   },
-  // optimization: {
-  //   runtimeChunk: 'single',
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       vendor: {
-  //                test: /[\\/]node_modules[\\/]/,
-  //                name: 'vendors',
-  //                chunks: 'all',
-  //              },
-  //            },
-  //       },
-  // },
-  devtool: 'source-map',
+  devtool: 'cheap-source-map',
   module: {
     rules: [
         {
